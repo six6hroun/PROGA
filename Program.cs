@@ -1,204 +1,114 @@
-﻿using System;
-public class MyArrayList<T>
+﻿using labababa;
+using System.Data;
+namespace Lab5
 {
-    private T[] elementData;
-    private int size;
-    public MyArrayList() // №1 конструктор для создания пустого динамического массива
+    public class Lab5
     {
-        elementData = new T[10];
-        size = 0;
-    }
-
-    public MyArrayList(T[] a) // №2 конструктор для создания динамического массива из переданного массива
-    {
-        elementData = new T[a.Length];
-        for (int i = 0; i < elementData.Length; i++) elementData[i] = a[i];
-        size = a.Length;
-    }
-
-    public MyArrayList(int capacity) // №3 конструктор для создания пустого динамического массива с заданной емкостью
-    {
-        elementData = new T[capacity];
-        size = 0;
-    }
-
-    public void Add(T e) // №4 метод для добавления элемента в конец массива
-    {
-        if (size == elementData.Length)
+        static string file = "Z:/input.txt";
+        static StreamReader sr = new StreamReader(file);
+        static MyArrayList <string> Teg()
         {
-            T[] NewelementData = new T[(size/2) + size + 1];
-            for (int i = 0; i < elementData.Length; i++) NewelementData[i] = elementData[i];
-            elementData = NewelementData;
-        }
-        elementData[size] = e;
-        size++;
-    }
-
-    public void AddAll(T[] a) // №5 метод для добавления элементов из другого массива
-    {
-        foreach (var element in a)
-        {
-            Add(element);
-        }
-    }
-
-    public void Clear() // №6 метод для очистки массива
-    {
-        size = 0;
-    }
-
-    public bool Contains(object o) // №7 метод для проверки наличия элемента в массиве
-    {
-        for (int i = 0; i < size; i++)
-        {
-            if (elementData[i].Equals(o)) return true;
-        }
-        return false;
-    }
-
-    public bool ContainsAll(T[] a) // №8 метод для проверки наличия всех элементов из другого массива
-    {
-        foreach (var element in a)
-        {
-            if (!Contains(element)) return false;
-        }
-        return true;
-    }
-
-    public bool IsEmpty() // №9 метод для проверки, пуст ли массив
-    {
-        if (size == 0) return true;
-        else return false;
-    }
-
-    public void Remove(object o) // №10 метод для удаления указанного объекта из массива
-    {
-        for (int i = 0; i < size; i++)
-        {
-            if (elementData[i].Equals(o))
+            string line = sr.ReadLine();
+            if (line == null) throw new Exception("Empty line");
+            var result = new MyArrayList <string> (10);
+            while (line != null)
             {
-                for (int j = i; j < size - 1; j++) elementData[j] = elementData[j + 1];
-                size--;
+                bool isOpen = false;
+                bool isTeg = false;
+                string teg = "";
+                for (int i = 0; i < line.Length; i++)
+                {
+                    if (line[i] == '<' && line[i + 1] != null)
+                    {
+                        if (line[i + 1] == '/' || char.IsLetter(line[i + 1]) && !isOpen)  isOpen = true;
+                    }
+                    if (line[i] == '>' && isOpen == true) 
+                    { 
+                        teg += line[i]; 
+                        isTeg = true; 
+                        isOpen = false; 
+                    }
+                    if (isOpen && (line[i] == '<' || line[i] == '/' || char.IsLetter(line[i]) || char.IsDigit(line[i]))) teg += line[i];
+                    if (isTeg) 
+                    { 
+                        result.Add(teg); 
+                        teg = ""; 
+                        isTeg = false; 
+                    }
+                }
+                line = sr.ReadLine();
+            }
+            return result;
+        }
+        static MyArrayList <string> Delete (MyArrayList<string> Array)
+        {
+            MyArrayList <string> result = new MyArrayList <string> (10);
+            MyArrayList <string> allLowerTegs = new MyArrayList <string> (10);
+            string dublicat;
+            string dublicatLower;
+            for (int i = 0; i < Array.Size(); i++)
+            {
+                dublicat = Array.Get(i);
+                dublicatLower = dublicat.ToLower();
+                allLowerTegs.Add(dublicatLower);
+            }
+
+            for (int i = 0; i < allLowerTegs.Size(); i++)
+            {
+                string teg1 = allLowerTegs.Get(i);
+                for (int j = i + 1; j < allLowerTegs.Size(); j++)
+                {
+                    bool flag = true;
+                    string teg2 = allLowerTegs.Get(j);
+                    if (Math.Abs(teg2.Length - teg1.Length) > 1) continue;
+                    if (teg2.Length > teg1.Length && teg2[1] == '/')
+                    {
+                        for (int k = 1; k < teg1.Length; k++)
+                            if (teg1[k] != teg2[k + 1]) 
+                            { 
+                                flag = false; 
+                                break; 
+                            }
+                    }
+                    else if (teg1.Length > teg2.Length && teg1[1] == '/')
+                    {
+                        for (int k = 1; k < teg2.Length; k++)
+                            if (teg2[k] != teg1[k + 1]) 
+                            { 
+                                flag = false; 
+                                break; 
+                            }
+                    }
+                    else if (teg2.Length == teg1.Length)
+                    {
+                        for (int k = 1; k < teg1.Length; k++)
+                            if (teg1[k] != teg2[k]) 
+                            { 
+                                flag = false; 
+                                break; 
+                            }
+                    }
+                    else continue;
+                    if (flag) allLowerTegs.Set(j, "false");
+                }
+            }
+            for (int i = 0; i < allLowerTegs.Size(); i++)
+            {
+                if (allLowerTegs.Get(i) == "false") continue;
+                result.Add(Array.Get(i));
+            }
+            return result;
+        }
+        static void Main(string[] args)
+        {
+            var array = new MyArrayList <string> (10);
+            var teg = new MyArrayList <string> (10);
+            array = Teg();
+            teg = Delete(array);
+            for (int i = 0; i < teg.Size(); i++)
+            {
+                Console.WriteLine(teg.Get(i));
             }
         }
-    }
-
-    public void RemoveAll(T[] a) // №11 метод для удаления всех указанных объектов из массива
-    {
-        foreach (var element in a)
-        {
-            Remove(element);
-        }
-    }
-
-    public void RetainAll(T[] a) // №12 метод для оставления в массиве только указанных объектов
-    {
-        int newSize = 0;
-        T[] newElementData = new T[size];
-        for (int k = 0; k < a.Length; k++)
-        {
-            for (int i = 0; i < size; i++)
-                if (elementData[i].Equals(a[k]))
-                {
-                    newElementData[newSize] = a[k];
-                    newSize++;
-                }
-        }
-        size = newSize;
-        elementData = newElementData;
-    }
-
-    public int Size() // №13 метод для получения размера массива
-    {
-        return size;
-    }
-
-    public T[] ToArray() // №14 метод для преобразования в массив
-    {
-        T[] result = new T[size];
-        for (int i=0; i < size; i++) result[i] = elementData[i];
-        return result;
-    }
-
-    public T[] ToArray(T[] a) // №15 метод для преобразования в массив с заданным типом
-    {
-        if (a == null || a.Length < size) return ToArray();
-        for (int i = 0; i < size; i++) a[i] = elementData[i];
-        return a;
-    }
-
-    public void Add(int index, T e) // №16 метод для добавления элемента по индексу
-    {
-        if (index > size) 
-        { 
-            Add(e); 
-            return; 
-        }
-        T[] NewElementData = new T[size + 1];
-        for (int i = 0; i < index; i++) NewElementData[i] = elementData[i];
-        NewElementData[index] = e;
-        for (int i = index + 1; i < size; i++) NewElementData[i] = elementData[i - 1];
-        elementData = NewElementData;
-        size++;
-    }
-
-    public void AddAll(int index, T[] a) // №17 метод для добавления элементов из другого массива по индексу
-    {
-        foreach (var element in a)
-        {
-            Add(index++, element);
-        }
-    }
-
-    public T Get(int index) // №18 метод для получения элемента по индексу
-    {
-        if (index < 0 || index >= size) throw new ArgumentOutOfRangeException("Index out of range");
-        return elementData[index];
-    }
-
-    public int IndexOf(object o) // №19 метод для нахождения индекса указанного объекта
-    {
-        for (int i = 0; i < size; i++)
-        {
-            if (elementData[i].Equals(o)) return i;
-        }
-        return -1;
-    }
-
-    public int LastIndexOf(object o) // №20 метод для нахождения последнего вхождения указанного объекта
-    {
-        for (int i = size - 1; i >= 0; i--)
-        {
-            if (elementData[i].Equals(o)) return i;
-        }
-        return -1;
-    }
-
-    public T Remove(int index) // №21 метод для удаления элемента по индексу
-    {
-        if (index < 0 || index >= size) throw new ArgumentOutOfRangeException("Index out of range");
-        T removedElement = elementData[index];
-        for (int i = index; i < size - 1; i++) elementData[i] = elementData[i + 1];
-        size--;
-        return removedElement;
-    }
-
-    public void Set(int index, T e) // №22 метод для замены элемента по индексу новым элементом
-    {
-        if (index < 0 || index >= size) throw new ArgumentOutOfRangeException("Index out of range");
-        elementData[index] = e;
-    }
-
-    public T[] SubList(int fromIndex, int toIndex) // №23 метод для получения подсписка элементов
-    {
-        if (fromIndex < 0 || toIndex > size || fromIndex > toIndex) throw new ArgumentOutOfRangeException("Index out of range");
-        T[] subList = new T[toIndex - fromIndex];
-        int index = 0;
-        for (int i = fromIndex; i < toIndex; i++)
-        {
-            subList[index] = elementData[i];
-            index++;
-        }
-        return subList;
     }
 }
