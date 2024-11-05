@@ -4,9 +4,9 @@ namespace MyVector
 {
     public class MyVector<T>
     {
-        private T[] elementData;
-        private int elementCount;
-        private int capacityIncrement;
+        protected T[] elementData;
+        protected int elementCount;
+        protected int capacityIncrement;
 
         public MyVector(int initialCapacity, int newCapacityIncrement) //№1 метод для создания пустоговектора с начальной ёмкостью initialCapacity и значением приращения ёмкости capacityIncrement.
         {
