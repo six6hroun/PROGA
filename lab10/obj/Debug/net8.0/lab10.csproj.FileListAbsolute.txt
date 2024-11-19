@@ -1,0 +1,14 @@
+B:\Poccamehdd\vs\работы\lab10\bin\Debug\net8.0\lab10.exe
+B:\Poccamehdd\vs\работы\lab10\bin\Debug\net8.0\lab10.deps.json
+B:\Poccamehdd\vs\работы\lab10\bin\Debug\net8.0\lab10.runtimeconfig.json
+B:\Poccamehdd\vs\работы\lab10\bin\Debug\net8.0\lab10.dll
+B:\Poccamehdd\vs\работы\lab10\bin\Debug\net8.0\lab10.pdb
+B:\Poccamehdd\vs\работы\lab10\obj\Debug\net8.0\lab10.GeneratedMSBuildEditorConfig.editorconfig
+B:\Poccamehdd\vs\работы\lab10\obj\Debug\net8.0\lab10.AssemblyInfoInputs.cache
+B:\Poccamehdd\vs\работы\lab10\obj\Debug\net8.0\lab10.AssemblyInfo.cs
+B:\Poccamehdd\vs\работы\lab10\obj\Debug\net8.0\lab10.csproj.CoreCompileInputs.cache
+B:\Poccamehdd\vs\работы\lab10\obj\Debug\net8.0\lab10.dll
+B:\Poccamehdd\vs\работы\lab10\obj\Debug\net8.0\refint\lab10.dll
+B:\Poccamehdd\vs\работы\lab10\obj\Debug\net8.0\lab10.pdb
+B:\Poccamehdd\vs\работы\lab10\obj\Debug\net8.0\lab10.genruntimeconfig.cache
+B:\Poccamehdd\vs\работы\lab10\obj\Debug\net8.0\ref\lab10.dll
