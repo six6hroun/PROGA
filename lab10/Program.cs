@@ -1,4 +1,4 @@
-﻿using MyArrayList;
+using MyArrayList;
 
 namespace Lab10
 {
@@ -21,7 +21,7 @@ namespace Lab10
             }
         }
 
-        public void Heapify(int index) 
+        public void Heapify(int index)
         {
             int left = 2 * index + 1;
             int right = 2 * index + 2;
@@ -44,7 +44,7 @@ namespace Lab10
             }
         }
 
-        public void Swap(int index1, int index2) 
+        public void Swap(int index1, int index2)
         {
             T temp1 = heap.Get(index1);
             T temp2 = heap.Get(index2);
@@ -144,7 +144,12 @@ namespace Lab10
             Console.WriteLine($"{heap2.Extract()}\n");
             Console.WriteLine("Вторая куча с удаленным максимальным элементом:");
             heap2.Print();
-            heap1.AddElement(52);
+            Console.Write("Введите элемент который хотите добавить в кучу: ");
+            int z = Convert.ToInt32(Console.ReadLine());
+            heap1.AddElement(z);
+            heap1.Print();
+            Console.WriteLine();
+            heap1.MergeHeaps(heap2);
             heap1.Print();
         }
     }
