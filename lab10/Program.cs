@@ -53,21 +53,21 @@ namespace Lab10
             heap.Set(index1, temp2);
         }
 
-        public T Search() //№2 метод для нахождения максимума
+        public T Max() //№2 метод для нахождения максимума
         {
             return heap.Get(0);
         }
 
-        public T Extract() //№3 метод для удаления максимума
+        public T MaxAndDel() //№3 метод для удаления максимума
         {
-            T exElement = Search();
+            T exElement = Max();
             heap.Remove(0);
             size--;
             Heapify(0);
             return exElement;
         }
 
-        public void IncreaseKey(int index, T newKey) //№4 метод для увелечиения ключа
+        public void KeyPlus(int index, T newKey) //№4 метод для увелечиения ключа
         {
             if (index < 0 || index >= size)
             {
@@ -96,7 +96,7 @@ namespace Lab10
         {
             while (newHeap.size > 0)
             {
-                T element = newHeap.Extract();
+                T element = newHeap.MaxAndDel();
                 AddElement(element);
             }
 
@@ -145,10 +145,10 @@ namespace Lab10
             heap2.Print();
 
             Console.WriteLine("Максимальный элемент первой кучи:");
-            Console.WriteLine($"{heap1.Search()}");
+            Console.WriteLine($"{heap1.Max()}");
 
             Console.WriteLine("Максимальный элемент второй кучи:");
-            Console.WriteLine($"{heap2.Extract()}\n");
+            Console.WriteLine($"{heap2.MaxAndDel()}\n");
 
             Console.WriteLine("Вторая куча с удаленным максимальным элементом:");
             heap2.Print();
