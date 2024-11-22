@@ -1,4 +1,5 @@
 using MyArrayList;
+using System.Drawing;
 
 namespace Lab10
 {
@@ -95,7 +96,7 @@ namespace Lab10
         {
             while (newHeap.size > 0)
             {
-                T element = newHeap.Search();
+                T element = newHeap.Extract();
                 AddElement(element);
             }
 
@@ -119,36 +120,46 @@ namespace Lab10
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите элементы первой кучи");
-            int[] kucha1 = new int[8];
+            Console.WriteLine("Введите элементы первой кучи:");
+            int[] kucha1 = new int[6];
             for (int i = 0; i < kucha1.Length; i++)
             {
                 kucha1[i] = Convert.ToInt32(Console.ReadLine());
             }
-            Console.WriteLine("\nВведите элементы второй кучи");
-            int[] kucha2 = new int[6];
+
+            Console.WriteLine("\nВведите элементы второй кучи:");
+            int[] kucha2 = new int[4];
             for (int j = 0; j < kucha2.Length; j++)
             {
                 kucha2[j] = Convert.ToInt32(Console.ReadLine());
             }
+
             Kucha<int> heap1 = new Kucha<int>(kucha1);
             Kucha<int> heap2 = new Kucha<int>(kucha2);
+
             Console.WriteLine("\nРезультат:");
             Console.WriteLine("Первая куча:");
             heap1.Print();
+
             Console.WriteLine("Вторая куча:");
             heap2.Print();
+
             Console.WriteLine("Максимальный элемент первой кучи:");
             Console.WriteLine($"{heap1.Search()}");
+
             Console.WriteLine("Максимальный элемент второй кучи:");
             Console.WriteLine($"{heap2.Extract()}\n");
+
             Console.WriteLine("Вторая куча с удаленным максимальным элементом:");
             heap2.Print();
-            Console.Write("Введите элемент который хотите добавить в кучу: ");
+
+            Console.Write("Введите элемент, который хотите добавить в кучу: ");
             int z = Convert.ToInt32(Console.ReadLine());
             heap1.AddElement(z);
             heap1.Print();
             Console.WriteLine();
+
+            Console.WriteLine("Слияние кучь:");
             heap1.MergeHeaps(heap2);
             heap1.Print();
         }
