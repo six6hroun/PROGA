@@ -21,12 +21,14 @@ namespace MyArrayDeque
         public MyArrayDeque(T[] a) // конструктор для создания двунаправленной очереди из эл. передаваемого массива a
         {
             elemenst = new T[a.Length];
-            for (int i = 0; i < a.Length; i++)
-            {
-                elemenst[i] = a[i];
-            }
-            tail = 0;
             head = 0;
+            int i = 0;
+            foreach (T item in a)
+            {
+                elemenst[i] = item;
+                i++;
+            }
+            tail = i;
         }
 
         public MyArrayDeque(int numElements) // конструтор для создания пустой двунаправленной очереди с указанной вместимостью
