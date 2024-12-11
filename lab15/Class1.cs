@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -286,7 +286,12 @@ namespace MyArrayDeque
             return false;
         }
 
-        public T getIndex(int index)
+        public int indexOfHead()
+        {
+            return head;
+        }
+
+        public T get(int index)
         {
             return elemenst[index];
         }
