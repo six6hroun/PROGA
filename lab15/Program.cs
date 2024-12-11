@@ -1,31 +1,31 @@
 using MyArrayDeque;
-namespace Lab15
+namespace Labibibibi15
 {
     class program
     {
-        public static int CountDigit(string line)
+        public static int chislo(string line)
         {
-            int count = 0;
+            int k = 0;
             for (int i = 0; i < line.Length; i++)
             {
-                if (Char.IsDigit(line[i])) count++;
+                if (Char.IsDigit(line[i])) k++;
             }
-            return count;
+            return k;
         }
-        public static int CountSpace(string line)
+        public static int space(string line)
         {
-            int count = 0;
+            int k = 0;
             for (int i = 0; i < line.Length; i++)
             {
-                if (line[i] == ' ') count++;
+                if (line[i] == ' ') k++;
             }
-            return count;
+            return k;
         }
         static void Main(string[] args)
         {
-            string path1 = "input.txt";
-            string path2 = "output.txt";
-            StreamReader sr = new StreamReader(path1);
+            string file1 = "Z:/input.txt";
+            string file2 = "Z:/output.txt";
+            StreamReader sr = new StreamReader(file1);
             MyArrayDeque<string> deque = new MyArrayDeque<string>();
             string line = sr.ReadLine();
             if (line != null) { deque.add(line); }
@@ -34,24 +34,24 @@ namespace Lab15
                 line = sr.ReadLine();
                 if (line != null)
                 {
-                    if (CountDigit(line) > CountDigit(deque.getFirst())) deque.addLast(line);
+                    if (chislo(line) > space(deque.getFirst())) deque.addLast(line);
                     else deque.addFirst(line);
                 }
             }
             sr.Close();
 
-            StreamWriter sw = new StreamWriter(path2);
+            StreamWriter sw = new StreamWriter(file2);
             for (int i = deque.indexOfHead(); i < deque.size(); i++)
             {
                 sw.WriteLine(deque.get(i));
             }
             sw.Close();
 
-            Console.WriteLine("Введите кол-во пробелов: ");
+            Console.Write("Введите кол-во пробелов: ");
             int N = Convert.ToInt32(Console.ReadLine());
             for (int i = deque.indexOfHead(); i < deque.size(); i++)
             {
-                if (CountSpace(deque.get(i)) > N)
+                if (space(deque.get(i)) > N)
                 {
                     deque.remove(deque.get(i));
                     i--;
