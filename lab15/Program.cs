@@ -1,73 +1,64 @@
-﻿using MyArrayDeque;
-    class SortDeque
+using MyArrayDeque;
+namespace Lab15
+{
+    class program
     {
-        static int Kdigits(string line)
+        public static int CountDigit(string line)
         {
-            int k = 0;
-            foreach (char c in line)
+            int count = 0;
+            for (int i = 0; i < line.Length; i++)
             {
-                if (char.IsDigit(c))
-                {
-                    k++;
-                }
+                if (Char.IsDigit(line[i])) count++;
             }
-            return k;
+            return count;
         }
-
-        static int Kspaces(string line)
+        public static int CountSpace(string line)
         {
-            int k = 0;
-            foreach (char c in line)
+            int count = 0;
+            for (int i = 0; i < line.Length; i++)
             {
-                if (c == ' ')
-                {
-                    k++;
-                }
+                if (line[i] == ' ') count++;
             }
-            return k;
+            return count;
         }
-
-        public void sortirovka(int n)
-        {
-            MyArrayDeque<string> deque = new MyArrayDeque<string>();
-            string vxod = "B:/input.txt";
-            string vixod = "B:/output.txt";
-            StreamReader sr = new StreamReader(vxod);
-            StreamWriter sw = new StreamWriter(vixod);
-            string? lines = sr.ReadLine();
-
-            if (lines != null)
-            {
-                deque.addFirst(lines);
-            }
-
-            while (lines != null)
-            {
-                lines = sr.ReadLine();
-                if (lines != null)
-                {
-                    if (Kdigits(lines) > Kdigits(deque.getFirst())) deque.addLast(lines);
-                    else deque.addFirst(lines);
-                }
-            }
-
-            for (int i = 0; i < deque.size(); i++) sw.WriteLine(deque.getIndex(i));
-            sw.Close();
-
-            for (int i = 0; i < deque.size(); i++)
-            {
-                string line = deque.getIndex(i);
-                if (Kspaces(line) > n) deque.remove(line);
-            }
-            deque.print();
-        }
-
         static void Main(string[] args)
         {
-            SortDeque sort = new SortDeque();
-            Console.Write("Напишите количество пробелов: ");
-            string numberSpace = Console.ReadLine();
-            int n = Convert.ToInt32(numberSpace);
-            sort.sortirovka(n);
+            string path1 = "input.txt";
+            string path2 = "output.txt";
+            StreamReader sr = new StreamReader(path1);
+            MyArrayDeque<string> deque = new MyArrayDeque<string>();
+            string line = sr.ReadLine();
+            if (line != null) { deque.add(line); }
+            while (line != null)
+            {
+                line = sr.ReadLine();
+                if (line != null)
+                {
+                    if (CountDigit(line) > CountDigit(deque.getFirst())) deque.addLast(line);
+                    else deque.addFirst(line);
+                }
+            }
+            sr.Close();
+
+            StreamWriter sw = new StreamWriter(path2);
+            for (int i = deque.indexOfHead(); i < deque.size(); i++)
+            {
+                sw.WriteLine(deque.get(i));
+            }
+            sw.Close();
+
+            Console.WriteLine("Введите кол-во пробелов: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            for (int i = deque.indexOfHead(); i < deque.size(); i++)
+            {
+                if (CountSpace(deque.get(i)) > N)
+                {
+                    deque.remove(deque.get(i));
+                    i--;
+                }
+            }
+            for (int i = deque.indexOfHead(); i < deque.size(); i++)
+                Console.WriteLine(deque.get(i));
         }
     }
+}
