@@ -1,8 +1,8 @@
 ﻿public class MyLinkedList<T>
 {
-    private Node<T> first;
-    private Node<T> last;
-    private int size;
+    public Node<T> first;
+    public Node<T> last;
+    public int size;
     
     public MyLinkedList() // для создания пустого двунаправленного списка
     {
