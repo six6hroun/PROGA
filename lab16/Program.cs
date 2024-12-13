@@ -1,20 +1,9 @@
 ﻿public class MyLinkedList<T>
 {
-    class Node<T>
-    {
-        public T value;
-        public Node<T>? next;
-        public Node<T>? pred;
-        public Node(T element)
-        {
-            next = null;
-            pred = null;
-            value = element;
-        }
-    }
-    Node<T>? first;
-    Node<T>? last;
-    int size;
+    private Node<T> first;
+    private Node<T> last;
+    private int size;
+    
     public MyLinkedList() // для создания пустого двунаправленного списка
     {
         first = null;
