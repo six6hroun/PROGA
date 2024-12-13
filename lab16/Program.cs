@@ -49,8 +49,7 @@
         Node<T>? step = first;
         while (step != null)
         {
-            if (Equals(o, step.value))
-                return true;
+            if (Equals(o, step.value)) return true;
             step = step.next;
         }
         return false;
@@ -127,8 +126,7 @@
         public T[] ToArray() // для возвращения массива объектов, содержащего все элементы двунаправленного списка
     {
         T[] array = new T[size];
-        for (int index = 0; index < size; index++)
-            array[index] = Get(index);
+        for (int index = 0; index < size; index++) array[index] = Get(index);
         return array;
     }
     public T[] ToArray(ref T[] a) // для возвращения массива объектов, содержащего все элементы двунаправленного списка.Если аргумент a равен null, то создаётся новый массив, в который копируются элементы
@@ -137,10 +135,8 @@
         else
         {
             T[] newArray = new T[a.Length + size];
-            for (int i = 0; i < a.Length; i++)
-                newArray[i] = a[i];
-            for (int i = a.Length; i < newArray.Length; i++)
-                newArray[i] = Get(i);
+            for (int i = 0; i < a.Length; i++)  newArray[i] = a[i];
+            for (int i = a.Length; i < newArray.Length; i++) newArray[i] = Get(i);
             return newArray;
         }
     }
@@ -181,8 +177,7 @@
     }
     public void AddAll(int index, T[] a) // для добавления элементов в указанную позицию
     {
-        for (int i = 0; i < a.Length; i++)
-            Add(index, a[i]);
+        for (int i = 0; i < a.Length; i++) Add(index, a[i]);
     }
     public T Get(int index) // для возвращения элемента в указанной позиции
     {
@@ -249,8 +244,7 @@
     }
     public T[] SubList(int fromIndex, int toIndex) // для возвращения части двунаправленного списка
     {
-        if ((fromIndex < 0 || toIndex > size) || (toIndex < fromIndex))
-            throw new Exception();
+        if ((fromIndex < 0 || toIndex > size) || (toIndex < fromIndex)) throw new Exception();
         else
         {
             T[] array = new T[toIndex - fromIndex + 1];
@@ -285,8 +279,7 @@
     }
     public T Peek() // для возврата элемента из головы двунаправленного списка без его удаления
     {
-        if (first == null)
-            return default(T);
+        if (first == null) return default(T);
         return first.value;
     }
     public T Poll() // для удаления и возврата элемента из головы двунаправленного списка
@@ -305,8 +298,7 @@
     }
     public T GetFirst() // для возвращения первого элемента двунаправленного списка без его удаления
     {
-        if (first == null)
-            throw new Exception();
+        if (first == null) throw new Exception();
         return first.value;
     }
     public T GetLast() // для возвращения последнего элемента двунаправленного списка без его удаления
@@ -338,14 +330,12 @@
     }
     public T PeekFirst() // для возвращения элемента из головы двунаправленного списка без его удаления
     {
-        if (size == 0)
-            return default(T);
+        if (size == 0) return default(T);
         return first.value;
     }
     public T PeekLast() // для возвращения элемента из хвоста двунаправленного списка без его удаления
     {
-        if (size == 0)
-            return default(T);
+        if (size == 0) return default(T);
         return first.value;
     }
     public T PollFirst() // для возвращения элемента из головы двунаправленного списка с его удалением
