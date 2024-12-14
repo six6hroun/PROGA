@@ -112,6 +112,7 @@
         }
         return array;
     }
+     
     public void Put(K key, V value) // метод для добавления пары «ключ-значение» в отображение;
     {
         double count = (size + 1) / table.Length;
@@ -163,6 +164,7 @@
             size++;
         }
     }
+     
     private void PutInArray(Entry[] array, K key, V value) // метод для добавления новой пары ключ-значение в массив 
     {
         int index = Math.Abs(key.GetHashCode()) % array.Length;
@@ -178,12 +180,11 @@
             array[index] = newNode;
             size++;
     }
+     
     public void Remove(K key) // метод для удаления пары «ключ-значение» с указанным ключом из отображения;
-
     {
         int index = Math.Abs(key.GetHashCode()) % table.Length;
-        if (table[index] == null)
-            return;
+        if (table[index] == null) return;
         if (Equals(key, table[index].key))
         {
             table[index] = table[index].next;
@@ -204,20 +205,9 @@
             step = step.next;
         }
     }
+     
     public int Size() // метод  для возврата количества пар «ключ-значение» в отображении.
     {
         return size;
-    }
-    public void Print() // консруктор для создания пустого отображения с начальной ёмкостью 16 и коэффициентом загрузки 0,75;
-    {
-        for (int index = 0; index < table.Length; index++)
-        {
-            Entry step = table[index];
-            while (step != null)
-            {
-                Console.WriteLine(step.value);
-                step = step.next;
-            }
-        }
     }
 }
