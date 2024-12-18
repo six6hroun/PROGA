@@ -1,213 +1,246 @@
-﻿public class MyHashMap<K, V>
-{
-    private class Entry
+
+    public class MyHashMap<K, V>
     {
-        public K key { get; set; }
-        public V value { get; set; }
-        public Entry next { get; set; }
-        public Entry(K key, V value)
+        private class Entry
         {
-            this.key = key;
-            this.value = value;
-            next = null;
+            public K key { get; set; }
+            public V value { get; set; }
+            public Entry next { get; set; }
+            public Entry(K key, V value)
+            {
+                this.key = key;
+                this.value = value;
+                next = null;
+            }
         }
-    }
-    Entry[] table;
-    int size;
-    double loadFactor;
-    public MyHashMap() // консруктор для создания пустого отображения с начальной ёмкостью 16 и коэффициентом загрузки 0,75;
-    {
-        table = new Entry[16];
-        size = 0;
-        this.loadFactor = 0.75;
-    }
-    public MyHashMap(int initialCapacity) // консруктор для создания пустого отображения с указанной начальной ёмкостью и коэффициентом загрузки 0,75;
-    {
-        table = new Entry[initialCapacity];
-        size = 0;
-        this.loadFactor = 0.75;
-    }
-    public MyHashMap(int initialCapacity, double loadFactor) // консруктор для создания пустого отображения с указанной начальной ёмкостью и коэффициентом загрузки;
-    {
-        table = new Entry[initialCapacity];
-        size = 0;
-        this.loadFactor = loadFactor;
-    }
-    public void Clear() // метод для удаления всех пар «ключ-значение» из отображения;
-    {
-        Array.Clear(table);
-        size = 0;
-    }
-    public bool ContainsKey(K key) // метод для проверки, содержит ли отображение указанный ключ;
-    {
-        int index = Math.Abs(key.GetHashCode()) % table.Length;
-        Entry step = table[index];
-        while (step != null)
+        Entry[] table;
+        int size;
+        double loadFactor;
+        public MyHashMap() // консруктор для создания пустого отображения с начальной ёмкостью 16 и коэффициентом загрузки 0,75;
         {
-            if (Equals(step.key, key)) return true;
-            step = step.next;
+            table = new Entry[16];
+            size = 0;
+            this.loadFactor = 0.75;
         }
-        return false;
-    }
-    public bool ContainsValue(V value) // метод для проверки, содержит ли отображение указанное значение;
-    {
-        for (int index = 0; index < table.Length; index++)
+        public MyHashMap(int initialCapacity) // консруктор для создания пустого отображения с указанной начальной ёмкостью и коэффициентом загрузки 0,75;
         {
+            table = new Entry[initialCapacity];
+            size = 0;
+            this.loadFactor = 0.75;
+        }
+        public MyHashMap(int initialCapacity, double loadFactor) // консруктор для создания пустого отображения с указанной начальной ёмкостью и коэффициентом загрузки;
+        {
+            table = new Entry[initialCapacity];
+            size = 0;
+            this.loadFactor = loadFactor;
+        }
+        public void Clear() // метод для удаления всех пар «ключ-значение» из отображения;
+        {
+            Array.Clear(table);
+            size = 0;
+        }
+        public bool ContainsKey(K key) // метод для проверки, содержит ли отображение указанный ключ;
+        {
+            int index = Math.Abs(key.GetHashCode()) % table.Length;
             Entry step = table[index];
             while (step != null)
             {
-                if (Equals(step.value, value)) return true;
+                if (Equals(step.key, key)) return true;
                 step = step.next;
             }
+            return false;
         }
-        return false;
-    }
-    public HashSet<object> EntrySet() // метод для возврата множества (Set) всех пар «ключ-значение» в отображении;
-
-    {
-        HashSet<object> entries = new HashSet<object>();
-        for (int index = 0; index < table.Length; index++)
+        public bool ContainsValue(V value) // метод для проверки, содержит ли отображение указанное значение;
         {
-            Entry step = table[index];
-            while (step != null)
+            for (int index = 0; index < table.Length; index++)
             {
-                entries.Add(step);
-                step = step.next;
-            }
-        }
-        return entries;
-    }
-    public V Get(K key) // метод для возврата значения, связанного с указанным ключом, или null, если ключ не найден;
-    {
-        int index = Math.Abs(key.GetHashCode()) % table.Length;
-        Entry step = table[index];
-        while (step != null)
-        {
-            if (Equals(step.key, key)) return step.value;
-            step = step.next;
-        }
-        throw new Exception("Ключ не найден");
-    }
-    public bool IsEmpty() // метод для проверки, является ли отображение пустым;
-    {
-        return size == 0;
-    }
-    public K[] KeySet() // метод для возврата множества (Set) всех ключей в отображении;
-    {
-        K[] array = new K[size];
-        int index = 0;
-        for (int i = 0; i < table.Length; i++)
-        {
-            if (table[i] != null)
-            {
-                Entry step = table[i];
-
+                Entry step = table[index];
                 while (step != null)
                 {
-                    array[index] = step.key;
-                    index++;
+                    if (Equals(step.value, value)) return true;
                     step = step.next;
                 }
             }
+            return false;
         }
-        return array;
-    }
-     
-    public void Put(K key, V value) // метод для добавления пары «ключ-значение» в отображение;
-    {
-        double count = (size + 1) / table.Length;
-        if (count >= loadFactor)
-        {
-            Entry[] newArray = new Entry[table.Length * 3];
-            size = 0;
+        public HashSet<object> EntrySet() // метод для возврата множества (Set) всех пар «ключ-значение» в отображении;
 
+        {
+            HashSet<object> entries = new HashSet<object>();
+            for (int index = 0; index < table.Length; index++)
+            {
+                Entry step = table[index];
+                while (step != null)
+                {
+                    entries.Add(step);
+                    step = step.next;
+                }
+            }
+            return entries;
+        }
+        public V Get(K key) // метод для возврата значения, связанного с указанным ключом, или null, если ключ не найден;
+        {
+            int index = Math.Abs(key.GetHashCode()) % table.Length;
+            Entry step = table[index];
+            while (step != null)
+            {
+                if (Equals(step.key, key)) return step.value;
+                step = step.next;
+            }
+            throw new Exception("Ключ не найден");
+        }
+        public bool IsEmpty() // метод для проверки, является ли отображение пустым;
+        {
+            return size == 0;
+        }
+        public K[] KeySet() // метод для возврата множества (Set) всех ключей в отображении;
+        {
+            K[] array = new K[size];
+            int index = 0;
             for (int i = 0; i < table.Length; i++)
             {
                 if (table[i] != null)
                 {
-                    Entry val = table[i];
-                    while (val != null)
+                    Entry step = table[i];
+
+                    while (step != null)
                     {
-                        int index = Math.Abs(val.key.GetHashCode()) % newArray.Length;
-                        PutInArray(newArray, val.key, val.value);
-                        val = val.next;
+                        array[index] = step.key;
+                        index++;
+                        step = step.next;
                     }
                 }
             }
-            table = newArray;
+            return array;
         }
-        int index1 = Math.Abs(key.GetHashCode()) % table.Length;
-        Entry step = table[index1];
-        if (step != null)
+
+        public void Put(K key, V value) // метод для добавления пары «ключ-значение» в отображение;
         {
-            int f = 1;
-            while (step.next != null)
+            double count = (size + 1) / table.Length;
+            if (count >= loadFactor)
             {
-                if (Equals(step.key, key))
+                Entry[] newArray = new Entry[table.Length * 3];
+                size = 0;
+
+                for (int i = 0; i < table.Length; i++)
                 {
-                    step.value = value;
-                    f = 0;
+                    if (table[i] != null)
+                    {
+                        Entry val = table[i];
+                        while (val != null)
+                        {
+                            int index = Math.Abs(val.key.GetHashCode()) % newArray.Length;
+                            PutInArray(newArray, val.key, val.value);
+                            val = val.next;
+                        }
+                    }
                 }
-                step = step.next;
+                table = newArray;
             }
-            if (f == 1)
+            int index1 = Math.Abs(key.GetHashCode()) % table.Length;
+            Entry step = table[index1];
+            if (step != null)
+            {
+                int f = 1;
+                while (step.next != null)
+                {
+                    if (Equals(step.key, key))
+                    {
+                        step.value = value;
+                        f = 0;
+                    }
+                    step = step.next;
+                }
+                if (f == 1)
+                {
+                    Entry newNode = new Entry(key, value);
+                    step.next = newNode;
+                    size++;
+                }
+            }
+            else
             {
                 Entry newNode = new Entry(key, value);
-                step.next = newNode;
+                table[index1] = newNode;
                 size++;
             }
         }
-        else
+
+        private void PutInArray(Entry[] array, K key, V value) // метод для добавления новой пары ключ-значение в массив 
         {
+            int index = Math.Abs(key.GetHashCode()) % array.Length;
             Entry newNode = new Entry(key, value);
-            table[index1] = newNode;
-            size++;
-        }
-    }
-     
-    private void PutInArray(Entry[] array, K key, V value) // метод для добавления новой пары ключ-значение в массив 
-    {
-        int index = Math.Abs(key.GetHashCode()) % array.Length;
-        Entry newNode = new Entry(key, value);
-        if (array[index] != null)
-        {
-            Entry step = array[index];
-            while (step.next != null)
-                step = step.next;
-            step.next = newNode;
-        }
-        else
-            array[index] = newNode;
-            size++;
-    }
-     
-    public void Remove(K key) // метод для удаления пары «ключ-значение» с указанным ключом из отображения;
-    {
-        int index = Math.Abs(key.GetHashCode()) % table.Length;
-        if (table[index] == null) return;
-        if (Equals(key, table[index].key))
-        {
-            table[index] = table[index].next;
-            size--;
-            return;
-        }
-        Entry step = table[index];
-        Entry pred = null;
-        while (step != null)
-        {
-            if (Equals(step.key, key))
+            if (array[index] != null)
             {
-                pred.next = step.next;
+                Entry step = array[index];
+                while (step.next != null)
+                    step = step.next;
+                step.next = newNode;
+            }
+            else
+                array[index] = newNode;
+            size++;
+        }
+
+        public void Remove(K key) // метод для удаления пары «ключ-значение» с указанным ключом из отображения;
+        {
+            int index = Math.Abs(key.GetHashCode()) % table.Length;
+            if (table[index] == null) return;
+            if (Equals(key, table[index].key))
+            {
+                table[index] = table[index].next;
                 size--;
                 return;
             }
-            pred = step;
-            step = step.next;
+            Entry step = table[index];
+            Entry pred = null;
+            while (step != null)
+            {
+                if (Equals(step.key, key))
+                {
+                    pred.next = step.next;
+                    size--;
+                    return;
+                }
+                pred = step;
+                step = step.next;
+            }
+        }
+
+        public int Size() // метод  для возврата количества пар «ключ-значение» в отображении.
+        {
+            return size;
+        }
+
+        public void Print()
+        {
+            for (int index = 0; index < table.Length; index++)
+            {
+                Entry step = table[index];
+                while (step != null)
+                {
+                    Console.Write($"{step.key} ");
+                    step = step.next;
+                }
+            }
         }
     }
-     
-    public int Size() // метод  для возврата количества пар «ключ-значение» в отображении.
+    public class program
     {
-        return size;
+        static void Main(string[] a)
+        {
+            MyHashMap<string, int> Hash = new MyHashMap<string, int>();
+            Hash.Put("Gurgen", 19);
+            Hash.Put("Umar", 18);
+            Hash.Put("Nikita", 21);
+            Hash.Put("Artem", 20);
+            Hash.Put("Tigran", 30);
+            Console.Write("Элементы хеш-карты - ");
+            Hash.Print();
+            Hash.Remove("Umar");
+            Console.WriteLine($"\nЕсть ли данное значение на данный момент - {Hash.ContainsValue(18)}");
+            Console.Write("Элменеты хеш-карты после удаления - ");
+            Hash.Print();
+            Console.WriteLine($"\nЕсть ли данное значение на данный момент - {Hash.ContainsValue(19)}");
+        }
     }
-}
