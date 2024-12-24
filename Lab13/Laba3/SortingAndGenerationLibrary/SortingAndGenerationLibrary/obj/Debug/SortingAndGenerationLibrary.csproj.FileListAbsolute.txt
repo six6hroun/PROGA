@@ -1,0 +1,12 @@
+C:\Users\user\source\repos\SortingAndGenerationLibrary\SortingAndGenerationLibrary\bin\Debug\SortingAndGenerationLibrary.dll
+C:\Users\user\source\repos\SortingAndGenerationLibrary\SortingAndGenerationLibrary\bin\Debug\SortingAndGenerationLibrary.pdb
+C:\Users\user\source\repos\SortingAndGenerationLibrary\SortingAndGenerationLibrary\obj\Debug\SortingAndGenerationLibrary.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\SortingAndGenerationLibrary\SortingAndGenerationLibrary\obj\Debug\SortingAndGenerationLibrary.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\SortingAndGenerationLibrary\SortingAndGenerationLibrary\obj\Debug\SortingAndGenerationLibrary.dll
+C:\Users\user\source\repos\SortingAndGenerationLibrary\SortingAndGenerationLibrary\obj\Debug\SortingAndGenerationLibrary.pdb
+C:\Users\user\source\repos\Лаба_13 C#\Laba3\SortingAndGenerationLibrary\SortingAndGenerationLibrary\obj\Debug\SortingAndGenerationLibrary.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Лаба_13 C#\Laba3\SortingAndGenerationLibrary\SortingAndGenerationLibrary\obj\Debug\SortingAndGenerationLibrary.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Лаба_13 C#\Laba3\SortingAndGenerationLibrary\SortingAndGenerationLibrary\bin\Debug\SortingAndGenerationLibrary.dll
+C:\Users\user\source\repos\Лаба_13 C#\Laba3\SortingAndGenerationLibrary\SortingAndGenerationLibrary\bin\Debug\SortingAndGenerationLibrary.pdb
+C:\Users\user\source\repos\Лаба_13 C#\Laba3\SortingAndGenerationLibrary\SortingAndGenerationLibrary\obj\Debug\SortingAndGenerationLibrary.dll
+C:\Users\user\source\repos\Лаба_13 C#\Laba3\SortingAndGenerationLibrary\SortingAndGenerationLibrary\obj\Debug\SortingAndGenerationLibrary.pdb
