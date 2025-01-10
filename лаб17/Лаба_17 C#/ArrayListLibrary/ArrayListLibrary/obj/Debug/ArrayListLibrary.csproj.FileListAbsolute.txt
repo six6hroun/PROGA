@@ -1,0 +1,6 @@
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\ArrayListLibrary\ArrayListLibrary\bin\Debug\ArrayListLibrary.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\ArrayListLibrary\ArrayListLibrary\bin\Debug\ArrayListLibrary.pdb
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\ArrayListLibrary\ArrayListLibrary\obj\Debug\ArrayListLibrary.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\ArrayListLibrary\ArrayListLibrary\obj\Debug\ArrayListLibrary.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\ArrayListLibrary\ArrayListLibrary\obj\Debug\ArrayListLibrary.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\ArrayListLibrary\ArrayListLibrary\obj\Debug\ArrayListLibrary.pdb

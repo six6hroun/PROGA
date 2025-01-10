@@ -1,0 +1,53 @@
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17 C#.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17.Form1.resources
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17 C#.csproj.GenerateResource.cache
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17 C#.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\Лаба_17 C#.exe.config
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\Лаба_17 C#.exe
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\Лаба_17 C#.pdb
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\ZedGraph.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\ZedGraph.xml
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17 C#.csproj.Up2Date
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17 C#.exe
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17 C#.pdb
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17.Properties.Resources.resources
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\Лаба_17 C#.exe.config
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\Лаба_17 C#.exe
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\Лаба_17 C#.pdb
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\ZedGraph.dll
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\ZedGraph.xml
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17 C#.csproj.AssemblyReference.cache
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17 C#.csproj.SuggestedBindingRedirects.cache
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17.Form1.resources
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17.Properties.Resources.resources
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17 C#.csproj.GenerateResource.cache
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17 C#.csproj.CoreCompileInputs.cache
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17 C#.csproj.CopyComplete
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17 C#.exe
+C:\Users\s0188177\source\repos\Лаба_17 C#\Лаба_17 C#\obj\Debug\Лаба_17 C#.pdb

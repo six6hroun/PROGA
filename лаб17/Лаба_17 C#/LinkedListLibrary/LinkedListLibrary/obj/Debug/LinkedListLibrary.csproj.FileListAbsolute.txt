@@ -1,0 +1,6 @@
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\LinkedListLibrary\LinkedListLibrary\bin\Debug\LinkedListLibrary.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\LinkedListLibrary\LinkedListLibrary\bin\Debug\LinkedListLibrary.pdb
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\LinkedListLibrary\LinkedListLibrary\obj\Debug\LinkedListLibrary.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\LinkedListLibrary\LinkedListLibrary\obj\Debug\LinkedListLibrary.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\LinkedListLibrary\LinkedListLibrary\obj\Debug\LinkedListLibrary.dll
+C:\Users\user\source\repos\Лаба_17 C#\Лаба_17 C#\LinkedListLibrary\LinkedListLibrary\obj\Debug\LinkedListLibrary.pdb
