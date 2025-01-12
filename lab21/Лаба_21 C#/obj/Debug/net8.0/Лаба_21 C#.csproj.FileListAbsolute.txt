@@ -1,0 +1,18 @@
+C:\Users\user\source\repos\Лаба_21 C#\Лаба_21 C#\obj\Debug\net8.0\Лаба_21 C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\Лаба_21 C#\Лаба_21 C#\obj\Debug\net8.0\Лаба_21 C#.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Лаба_21 C#\Лаба_21 C#\obj\Debug\net8.0\Лаба_21 C#.AssemblyInfo.cs
+C:\Users\user\source\repos\Лаба_21 C#\Лаба_21 C#\obj\Debug\net8.0\Лаба_21 C#.csproj.CoreCompileInputs.cache
+B:\Poccamehdd\vs\работы\lab21\Лаба_21 C#\bin\Debug\net8.0\Лаба_21 C#.exe
+B:\Poccamehdd\vs\работы\lab21\Лаба_21 C#\bin\Debug\net8.0\Лаба_21 C#.deps.json
+B:\Poccamehdd\vs\работы\lab21\Лаба_21 C#\bin\Debug\net8.0\Лаба_21 C#.runtimeconfig.json
+B:\Poccamehdd\vs\работы\lab21\Лаба_21 C#\bin\Debug\net8.0\Лаба_21 C#.dll
+B:\Poccamehdd\vs\работы\lab21\Лаба_21 C#\bin\Debug\net8.0\Лаба_21 C#.pdb
+B:\Poccamehdd\vs\работы\lab21\Лаба_21 C#\obj\Debug\net8.0\Лаба_21 C#.GeneratedMSBuildEditorConfig.editorconfig
+B:\Poccamehdd\vs\работы\lab21\Лаба_21 C#\obj\Debug\net8.0\Лаба_21 C#.AssemblyInfoInputs.cache
+B:\Poccamehdd\vs\работы\lab21\Лаба_21 C#\obj\Debug\net8.0\Лаба_21 C#.AssemblyInfo.cs
+B:\Poccamehdd\vs\работы\lab21\Лаба_21 C#\obj\Debug\net8.0\Лаба_21 C#.csproj.CoreCompileInputs.cache
+B:\Poccamehdd\vs\работы\lab21\Лаба_21 C#\obj\Debug\net8.0\Лаба_21 C#.dll
+B:\Poccamehdd\vs\работы\lab21\Лаба_21 C#\obj\Debug\net8.0\refint\Лаба_21 C#.dll
+B:\Poccamehdd\vs\работы\lab21\Лаба_21 C#\obj\Debug\net8.0\Лаба_21 C#.pdb
+B:\Poccamehdd\vs\работы\lab21\Лаба_21 C#\obj\Debug\net8.0\Лаба_21 C#.genruntimeconfig.cache
+B:\Poccamehdd\vs\работы\lab21\Лаба_21 C#\obj\Debug\net8.0\ref\Лаба_21 C#.dll
